@@ -1,7 +1,7 @@
 # Project information
-site_name: 小艾的 MkDocs 網站 測試123
+site_name: 小艾的 MkDocs 網站
 # 之後修改成Gitlab page的網址
-site_url: http://127.0.0.1:8000/
+site_url: https://test-hannah2400214-ef491c3dd4eaf78a970e206fc5e458d3e166d011e109.gitlab.io/
 site_author: Selene Ai
 site_description: 練習使用 Markdown 筆記，來記錄目前所學的Angular前端技術與程式相關的知識。
 
