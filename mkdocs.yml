@@ -64,6 +64,8 @@ theme:
     code: Roboto Mono
   logo: assets/angular.png
   favicon: assets/angular.png
+  icon:
+    annotation: material/plus-circle-outline
 
 # Plugins
 plugins:
