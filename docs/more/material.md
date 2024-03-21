@@ -108,7 +108,8 @@ sequenceDiagram
     Component->>DOM: {{value}}
     Component->>DOM: [property] = "value"
     DOM->>Component: (Event) = "handler"
-    Component->>DOM: [(ngModel)] = "Property"
+    Component->>DOM: 雙向綁定
+    DOM->>Component: [(ngModel)] = "Property"
 ```
 
 ---
@@ -117,17 +118,46 @@ sequenceDiagram
 
 Angular 有許多元件，這時使用grid cards 就可以直接導向目標頁面。
 
+
 <div class="grid cards" markdown>
 
-- :fontawesome-brands-html5: __HTML__ for content and structure
-- :fontawesome-brands-js: __JavaScript__ for interactivity
-- :fontawesome-brands-css3: __CSS__ for text running out of boxes
-- :fontawesome-brands-internet-explorer: __Internet Explorer__ ... huh?
+-   :simple-webcomponentsdotorg: __Component__
+
+    ---
+
+    了解什麼是 Angular 元件。
+
+    [:octicons-arrow-right-24: Go to Page](#)
+
+-   :material-connection: __Service__
+
+    ---
+
+    了解服務的用法以及靜態注射的原理。
+
+    [:octicons-arrow-right-24: Go to Page](#)
+
+-   :fontawesome-solid-hand-point-right: __Directive__
+
+    ---
+
+    建立你自己的指令用於html元素上。
+
+    [:octicons-quote-16: Go to Page](#)
+
+-   :octicons-blocked-16: __Guard__
+
+    ---
+
+    建立網頁的守門員，驗證使用者身份。
+
+    [:octicons-arrow-right-24: Go to Page](#)
 
 </div>
 
 ---
 
-## 特別感謝
+## Special thanks
 
-將MK Docs網站部署到GitLab Page的方法，感謝日宏提供的[教學](https://test-zoxul-25825563df0f22bc52a20ee5150919645dc3ef0f19709d858ccf.gitlab.io/git/)。
+:rose: 將MK Docs網站部署到GitLab Page的方法，感謝日宏提供的[教學](https://test-zoxul-25825563df0f22bc52a20ee5150919645dc3ef0f19709d858ccf.gitlab.io/git/)。  
+:sunflower: 感謝Kim學長提供範例給我參考～
