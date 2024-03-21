@@ -169,6 +169,6 @@ nav:
     
 
 
-  - Learn More:
-    - MkDocs Material: more/material.md
-    - FAQ: more/sponsoring.md
+  - Learn more:
+    - MkDocs material: more/material.md
+    - Build MkDocs website: more/build.md
