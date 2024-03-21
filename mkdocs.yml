@@ -156,6 +156,12 @@ nav:
       - 生命週期: component/lifecycle.md
       - ng-content: component/ngcontent.md
 
+  - Form:
+    - Reactive form: form/reactive-form.md
+    - Template form: form/template-form.md
+    - Web api: form/web-api.md
+    - Entity framwork: form/entity-framwork.md
+    
 
 
   - Learn More:
