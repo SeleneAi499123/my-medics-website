@@ -1,0 +1,11 @@
+@keyframes bulb {
+    0%, 40%, 80%, 100% {
+      transform: scale(1);
+    }
+    20%, 60% {
+      transform: scale(1.15);
+    }
+  }
+  .bulb {
+    animation: bulb 1000ms infinite;
+  }

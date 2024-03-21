@@ -90,6 +90,9 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/SeleneAi499123
 
+extra_css:
+  - stylesheets/extra.css
+
 # Extensions
 markdown_extensions:
   - abbr
@@ -165,5 +168,5 @@ nav:
 
 
   - Learn More:
-    - Getting started: more/getting-started.md
+    - MkDocs Material: more/material.md
     - FAQ: more/sponsoring.md
