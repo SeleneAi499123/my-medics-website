@@ -26,7 +26,7 @@ theme:
     # - header.autohide
     # - navigation.expand
     - navigation.footer
-    - navigation.indexes
+    # - navigation.indexes
 
     - navigation.instant
     - navigation.instant.preview
@@ -153,13 +153,26 @@ nav:
     - Installation: getting-started.md
     - Create a new project: create.md
     - Route: 
-      - 什麼是Route: route/route.md
-      - 導覽列樣式: route/navstyle.md
-      - 參數的傳遞: route/param.md
-    - Component:    
-      - 認識Component: component/component.md
-      - 生命週期: component/lifecycle.md
+      - Route: route/route.md
+      - Navigation style: route/navstyle.md
+      - Parameter passing: route/param.md
+    
+      
+    
+
+  - Components: 
+    - Component:
+      - Component: component/component.md
+      - Life cycle: component/lifecycle.md
       - ng-content: component/ngcontent.md
+    
+    - Directive:    
+      - Directive : directive/directive.md
+
+    - Service:    
+      - Dependency Injection : service/di.md
+      - Http Client: service/httpclient.md
+
 
   - Form:
     - Reactive form: form/reactive-form.md
