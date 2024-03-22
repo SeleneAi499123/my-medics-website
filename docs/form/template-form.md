@@ -89,7 +89,7 @@ ng g d checkExtNo
 
 #### c. 實作Validator介面
 
-```ts title="check-ext-no.directive.ts" hl_lines="4-6"
+```ts title="check-ext-no.directive.ts"
 export class CheckExtNoDirective {
   validate(control:AbstractControl):ValidationErrors | null{
     let extNo:number=parseInt(control.value);
@@ -110,7 +110,7 @@ export class CheckExtNoDirective {
 
 #### d. 套用到HTML
 
-```html hl_lines="3 7"
+```html
 <div class="form-group">
     <label for="size">分機號碼</label>
     <input type="text" class="form-control" placeholder="租借者的辦公室分機號碼" required name="extNo" pattern="[0-9]{4}" title="4個數字" [(ngModel)]="rentRoom.extNo" #extNo="ngModel" CheckExtNo>
