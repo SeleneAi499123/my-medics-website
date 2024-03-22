@@ -137,13 +137,13 @@ Angular 有許多元件，這時使用grid cards 就可以直接導向目標頁�
 
     [:octicons-arrow-right-24: Go to Page](#)
 
--   :fontawesome-solid-hand-point-right: __Directive__
+-   :octicons-quote-16: __Directive__
 
     ---
 
     建立你自己的指令用於html元素上。
 
-    [:octicons-quote-16: Go to Page](#)
+    [:octicons-arrow-right-24: Go to Page](#)
 
 -   :octicons-blocked-16: __Guard__
 
