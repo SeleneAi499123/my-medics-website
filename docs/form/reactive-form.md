@@ -5,7 +5,7 @@
 
 ## 引用模組
 
-想要建立一個響應式表單，需要先在專案內匯入`ReactiveFormsModule`才能使用相關功能。
+想要建立一個響應式表單，需要先在專案內匯入 `ReactiveFormsModule` 才能使用相關功能。
 
 ```ts title="app.module.ts" hl_lines="1 10"
 import { ReactiveFormsModule } from '@angular/forms';
@@ -25,7 +25,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 ## 建立類別
 
-遵循 MVC 的網頁結構，我們會需要一個類別來儲存表單內的所有欄位資料，首先使用Angular CLI建立一個類別，並在類別裡定義欄位名稱及屬性。
+依 MVC 的網頁結構，我們會需要一個類別來儲存表單內的所有欄位資料，首先使用Angular CLI建立一個類別，並在類別裡定義欄位名稱及屬性。
 
 ```bash
 ng g cl MeetingRoom
@@ -46,9 +46,9 @@ export class MeetingRoom {
 
 ## 使用 FormBuilder
 
-我們可以在表單建構的時候使用`FormGroup`的`FormBuilder`來定義欄位名及屬性，然後在`ngOnInit()`時使用`setValue()`來設值。
+我們可以在表單建構的時候使用`FormBuilder`來定義欄位名及屬性，然後在`ngOnInit()`時使用`setValue()`來設值。
 
-```ts hl_lines="3 6 8-13 18"
+```ts hl_lines="3  8-13 18"
 export class Page1Component {
   capacity=["5","10","15","20"];
   meetingRoomForm: FormGroup;
@@ -79,7 +79,7 @@ export class Page1Component {
 
 在表單的設計上，需要在`<form>`元素內設定`[formGroup]="meetingRoomForm"`以及`(ngSubmit)="onSubmit()">`，以及針對欄位元素設定`formControlName="name"`來進行表單資料的binding。
 
-```html hl_lines="1 4 8 14 18 20"
+```html hl_lines="1 4"
 <form [formGroup]="meetingRoomForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
         <label for="name">name</label>

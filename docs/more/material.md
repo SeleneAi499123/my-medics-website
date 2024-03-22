@@ -108,9 +108,11 @@ sequenceDiagram
     Component->>DOM: {{value}}
     Component->>DOM: [property] = "value"
     DOM->>Component: (Event) = "handler"
+    
     Component->>DOM: 雙向綁定
     DOM->>Component: [(ngModel)] = "Property"
 ```
+
 
 ---
 
