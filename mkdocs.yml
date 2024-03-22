@@ -95,6 +95,10 @@ extra:
 extra_css:
   - stylesheets/extra.css
 
+# 將超連結改為 _blank
+extra_javascript:
+  - 'custom.js'
+
 # Extensions
 markdown_extensions:
   - abbr
@@ -161,10 +165,9 @@ nav:
     
 
   - Components: 
-    - Component:
-      - Component: component/component.md
-      - Life cycle: component/lifecycle.md
-      - ng-content: component/ngcontent.md
+    - Component: component/component.md
+    - Life cycle: component/lifecycle.md
+    - ng-content: component/ngcontent.md
     
     - Directive:    
       - Directive : directive/directive.md
