@@ -185,7 +185,7 @@ nav:
     - Entity framwork: form/entity-framwork.md
   
   - Git: 
-    - Git: git/git.md
+    - Git commands: git/git.md
     - Git push to multi repo: git/git-remote-multi-repo.md
     - Add new SSH Key: git/ssh-key.md 
     
