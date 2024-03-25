@@ -10,22 +10,9 @@ MkDocs Material 有許多好用的小東西，可以幫助我們豐富網站內�
 
 :bulb:{.bulb} 以下是我在這個網站有用到的功能：
 
-
-- ### Reference
-
-將首頁index.md更改為自訂內容，檔案會放在`material/overrides/`目錄下面，詳細的操作方法可以參考[這裡](https://squidfunk.github.io/mkdocs-material/reference/)。
-
-```yaml
----
-template: home.html
----
-```
-
----
-
 - ### Admonitions
 
- 使用一些好用的警示框，像是warning框跟可展開的info框：
+ 使用一些好用的警示框，像是 warning 框跟可展開的 info 框：
 
 !!! warning 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
@@ -161,5 +148,5 @@ Angular 有許多元件，這時使用grid cards 就可以直接導向目標頁�
 
 ## Special thanks
 
-:rose: 將MK Docs網站部署到GitLab Page的方法，感謝日宏提供的[教學](https://test-zoxul-25825563df0f22bc52a20ee5150919645dc3ef0f19709d858ccf.gitlab.io/git/)。  
-:sunflower: 感謝Kim學長提供[範例](https://week-1-markdown-vian1113-988613423c571b6e909372a4c42f9b2b41b308.gitlab.io/)給我參考～
+:rose: 將 MK Docs 網站部署到 GitLab Page 的方法，感謝日宏提供的 [教學](https://test-zoxul-25825563df0f22bc52a20ee5150919645dc3ef0f19709d858ccf.gitlab.io/git/) 。  
+:sunflower: 感謝 Kim 學長提供 [範例](https://week-1-markdown-vian1113-988613423c571b6e909372a4c42f9b2b41b308.gitlab.io/) 給我參考～
