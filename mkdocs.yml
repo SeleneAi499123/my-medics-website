@@ -6,8 +6,9 @@ site_author: Selene Ai
 site_description: 練習使用 Markdown ，來記錄目前所學的前端技術與相關知識，邁向程式的偉大航道～
 
 # Repository
-repo_name: SeleneAi499123/MkDocs
-repo_url: https://github.com/SeleneAi499123/MkDocs
+repo_name: SeleneAi499123/my-mkdocs-website
+repo_url: https://github.com/SeleneAi499123/my-mkdocs-website
+edit_uri: edit/main/docs/
 
 # Configuration
 theme:
@@ -129,7 +130,7 @@ markdown_extensions:
       normalize_issue_symbols: true
       repo_url_shorthand: true
       user: SeleneAi499123
-      repo: MkDocs
+      repo: my-mkdocs-website
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.snippets:

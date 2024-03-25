@@ -33,4 +33,4 @@ pbcopy ~/.ssh/id_rsa.pub
 
 ## 4. 新增 SSH 公鑰到 GitHub
 
-登錄到 GitHub 帳戶，然後轉到個人設置中的 SSH and GPG keys，點擊 New SSH key，然後將複製的 SSH 公鑰貼上。
+登錄到 GitHub 帳戶，然後轉到個人設置中的 SSH and GPG keys，點擊 New SSH key，將複製的 SSH 公鑰貼上。
