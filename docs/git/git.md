@@ -3,8 +3,8 @@
 ## 常用控制指令
 
 - [git init](#git-init) : 在目錄中初始化一個新的 Git 儲存庫。
-- [git clone](#git-clone) : 從遠端儲存庫複製到本地。
 - [git remote](#git-remote) : 管理遠端儲存庫。
+- [git clone](#git-clone) : 複製遠端儲存庫到本地。
 - [git add / git stash](#git-add--git-stash) : 將文件的更改添加到暫存區。
 - [git commit -m](#git-commit--m) : 將暫存區中的更改提交到儲存庫。
 - [git reset / git revert](#git-reset--git-revert) : 撤銷更改。
@@ -25,9 +25,31 @@ git init <file directory>
 
 ---
 
+
+
+- ### **git remote**
+
+將本地儲存庫(local repo)與遠端儲存庫(remote repo)關聯，`origin`是遠端儲存庫的別名，可自行定義。
+
+```bash
+git remote add origin <remote repository url>
+```
+
+| 參數       | 說明                        |
+| --------- | --------------------------- |
+| `add`     | 新增遠端儲存庫           |
+| `remove`  | 刪除指定的遠端儲存庫           |
+| `rename`  | 將遠端儲存庫的別名更改為新的名稱 |
+| `set-url` | 設置遠端儲存庫的 URL          |
+
+
+> 延伸閱讀：[將本地變更推送至多個遠端存儲庫](../git/git-remote-multi-repo.md)
+
+---
+
 - ### **git clone**
 
-或是將遠端倉庫(remote repo)複製到本機的工作目錄(working dir)下。
+將遠端倉庫(remote repo)複製到本機的工作目錄(working dir)下，此指令會自動建立關聯。
 
 === "HTTPS"
     ```bash
@@ -44,26 +66,6 @@ git init <file directory>
 
 ---
 
-- ### **git remote**
-
-將本地儲存庫(local repo)與遠端儲存庫(remote repo)做關聯，`origin`是遠端儲存庫的別名，可自行定義。
-
-```bash
-git remote [add] origin <remote repository url>
-```
-
-| 參數       | 說明                        |
-| --------- | --------------------------- |
-| `remove`  | 刪除指定的遠端儲存庫           |
-| `rename`  | 將遠端儲存庫的別名更改為新的名稱 |
-| `set-url` | 設置遠端儲存庫的 URL          |
-| `-v`      | 列出所有遠端儲存庫及其 URL     |
-
-
-> 延伸閱讀：[將本地存儲庫關聯至多個遠端存儲庫](../git/git-remote-multi-repo.md)
-
----
-
 - ### **git add / git stash**
 
 提交檔案變更到暫存區(staging area)。
@@ -76,12 +78,12 @@ git add/stash .               // 當前目錄下所有的變更
 :bulb: ==git add 與 git stash的差異==：
 
 1. **git add**  
-    `git add` 命令用於將當前工作目錄中的指定文件的修改添加到暫存區（^^即將修改標記為準備提交的狀態^^）。
+    `git add` 命令用於將當前工作目錄中的指定文件的修改添加到暫存區，該文件為 ^^準備提交的狀態^^。
 2. **git stash**  
     `git stash` 命令用於將當前工作目錄中的修改（包括已經跟蹤的和未跟蹤的文件）暫存起來，能夠在 ^^切換分支或處理其他任務時暫時保存修改^^， 通常會搭配使用`git stash pop`將最近一次暫存的更改應用到當前分支。
 
 !!!success "總結"
-    總的來說，`git stash` 用於將當前所有修改暫存起來，以便稍後恢復它們，而 `git add` 則用於將特定文件的修改添加到暫存區中，以準備提交到儲存庫。
+    **`git stash` 用於將當前所有修改暫存起來，以便稍後恢復它們，而 `git add` 則用於將特定文件的修改添加到暫存區中，以準備提交到儲存庫。**
     
 
 ---
@@ -101,38 +103,41 @@ git commit -m "提交訊息"
 
 - ### **git reset / git revert**
 
-**1. git reset**
-`git reset` 用於取消暫存區或已提交的變更，可以選擇性地修改暫存區和工作目錄的內容，^^可能會刪除或修改到歷史紀錄^^；
+`git reset` 和 `git revert` 同樣是取消變更，它們的主要區別在於是否會修改到歷史記錄。
 
-```bash
-# 將檔案變更加入暫存區
-git add .
+1. **git reset**  
 
-# 取消暫存
-git reset
-```
+    `git reset` 用於取消暫存區或已提交的變更，^^可能會刪除或修改到歷史紀錄^^。
 
-![](../assets/images/screenshot/gitreset.png)
+    ```bash
+    # 將檔案變更加入暫存區
+    git add .
 
-**2. git revert**
+    # 取消暫存
+    git reset
+    ```
 
-`git revert` 用於撤銷已提交的變更，同時創建一個新的commit來反映這些更改的撤銷，^^用於在保持歷史完整性的同時撤銷先前的更改^^。
+    ![](../assets/images/screenshot/gitreset.png)
+
+2. **git revert**
+
+    `git revert` 用於撤銷已提交的變更，同時創建一個新的commit來反映這些更改的撤銷，用在 ^^保持歷史完整性的同時撤銷先前的更改^^。
 
 
-```bash
-git revert <commit> // 取消指定的commit
-git revert HEAD     // 取消前一次的commit
-```
+    ```bash
+    git revert <commit> // 取消指定的commit
+    git revert HEAD     // 取消前一次的commit
+    ```
 
-輸入`git log`查看歷史紀錄：
+    輸入`git log`查看歷史紀錄：
 
-![](../assets/images/screenshot/gitrevert.png)
+    ![](../assets/images/screenshot/gitrevert.png)
 
 ---
 
 - ### **git push**
 
-將本地已提交的變更推送到遠端儲存庫，遠端儲存庫別名`origin`，本地預設分支為`main`。
+將本地已提交的變更(committed)推送到遠端儲存庫，遠端儲存庫別名`origin`，本地預設分支為`main`。
 
 ```bash
 git push origin main
@@ -183,16 +188,33 @@ git push origin main
 
 - ### **git checkout**
 
-切換到不同的分支，加上 `-b` 參數，可以同時創建與切換分支，省略 `git branch` 的動作。
+`git checkout` 命令有多種用途，主要用於切換分支、或將檔案復原到過去某個特定版本。
 
-```bash
-git checkout [-b] branch2
-```
-  
-輸入`git branch`可以查看分支狀態：
+1. **切換分支**  
 
-![](../assets/images/screenshot/gitcheckoutb2.png)
+    後面加上 `-b` 參數，可以同時創建與切換分支，省略 `git branch branch2` 的動作。
 
+    ```bash
+    git checkout [-b] branch2
+    ```
+    
+    可以輸入`git branch` 查看分支狀態：
+
+    ![](../assets/images/screenshot/gitcheckoutb2.png)
+
+2. **檢出檔案**
+
+    檢出檔案時，Git 會將指定檔案的內容從儲存庫中提取，並覆蓋工作目錄中的檔案，對該檔案所做的任何未提交的更改都將失去。
+
+    ```bash
+    # 講檔案復原到過去某個特定的版本
+    # <commit_hash> 需要透過git log查看
+    git checkout <commit_hash> <file>
+    
+    # 將檔案復原到上一個提交的版本
+    git checkout <file>
+    ```
+    
 
 
 
@@ -267,7 +289,7 @@ git checkout [-b] branch2
     ![](../assets/images/screenshot/mergeremotetolocal.png)
 
     !!!note "Note"
-        `git merge` ==不會拉取遠端儲存庫暫存區的檔案變更，只會針對已提交的檔案進行合併== ，想要確保取得遠端儲存庫的最新版本，可以使用 [git pull](#git-pull) 指令。
+        `git merge` ==不會拉取遠端儲存庫暫存區的檔案變更，只會針對已提交的檔案進行合併== ，想要確保取得遠端儲存庫的最新版本，可以使用 [git pull](#git-pull--git-fetch) 指令。
 
 
 ---
@@ -313,6 +335,7 @@ git checkout [-b] branch2
 
 - `git diff`：顯示工作目錄中的檔案與暫存區或上一個提交之間的差異。
 
+- `git remote -v` : 列出所有遠端儲存庫及其相應的 URL。
 
 
 

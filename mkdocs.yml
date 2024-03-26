@@ -188,6 +188,7 @@ nav:
     - Git commands: git/git.md
     - Git push to multi repo: git/git-remote-multi-repo.md
     - Add new SSH Key: git/ssh-key.md 
+    - GitKraken client: git/gui-tool.md
     
 
 
