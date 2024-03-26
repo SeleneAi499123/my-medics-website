@@ -49,8 +49,16 @@ git init <file directory>
 將本地儲存庫(local repo)與遠端儲存庫(remote repo)做關聯，`origin`是遠端儲存庫的別名，可自行定義。
 
 ```bash
-git remote add origin <remote repository url>
+git remote [add] origin <remote repository url>
 ```
+
+| 參數       | 說明                        |
+| --------- | --------------------------- |
+| `remove`  | 刪除指定的遠端儲存庫           |
+| `rename`  | 將遠端儲存庫的別名更改為新的名稱 |
+| `set-url` | 設置遠端儲存庫的 URL          |
+| `-v`      | 列出所有遠端儲存庫及其 URL     |
+
 
 > 延伸閱讀：[將本地存儲庫關聯至多個遠端存儲庫](../git/git-remote-multi-repo.md)
 
@@ -93,7 +101,32 @@ git commit -m "提交訊息"
 
 - ### **git reset / git revert**
 
-`git reset` 用於取消暫存區或已提交的變更，可以選擇性地修改暫存區和工作目錄的內容，^^可能會刪除或修改到歷史紀錄^^；`git revert` 用於撤銷已提交的變更，同時創建一個新的commit來反映這些更改的撤銷，^^用於在保持歷史完整性的同時撤銷先前的更改^^。
+**1. git reset**
+`git reset` 用於取消暫存區或已提交的變更，可以選擇性地修改暫存區和工作目錄的內容，^^可能會刪除或修改到歷史紀錄^^；
+
+```bash
+# 將檔案變更加入暫存區
+git add .
+
+# 取消暫存
+git reset
+```
+
+![](../assets/images/screenshot/gitreset.png)
+
+**2. git revert**
+
+`git revert` 用於撤銷已提交的變更，同時創建一個新的commit來反映這些更改的撤銷，^^用於在保持歷史完整性的同時撤銷先前的更改^^。
+
+
+```bash
+git revert <commit> // 取消指定的commit
+git revert HEAD     // 取消前一次的commit
+```
+
+輸入`git log`查看歷史紀錄：
+
+![](../assets/images/screenshot/gitrevert.png)
 
 ---
 
@@ -156,7 +189,7 @@ git push origin main
 git checkout [-b] branch2
 ```
   
-輸入`git branch`查看分支狀態：
+輸入`git branch`可以查看分支狀態：
 
 ![](../assets/images/screenshot/gitcheckoutb2.png)
 
@@ -189,7 +222,7 @@ git checkout [-b] branch2
     ```
     
     !!!warning "注意"
-        此時輸入 `git checkout branch2` 切回 branch2 ，會發現檔案不會有任何變更，因為上面的示範是將 ==檔案變更== 的這個動作 commit 在 main 主要分支上。 
+        此時輸入 `git checkout branch2` 切回 branch2 ，會發現branch2內的檔案不會有任何變更，因為上面的示範是將 ==暫存區內的變更== commit 在 main 主要分支上。 
         === "branch2"
             ![](../assets/images/screenshot/compare-branch2.png)
             
@@ -234,7 +267,7 @@ git checkout [-b] branch2
     ![](../assets/images/screenshot/mergeremotetolocal.png)
 
     !!!note "Note"
-        `git merge` ==不會拉取遠端儲存庫暫存區的檔案變更，只會針對已提交變更的的檔案進行合併== ，想要確保取得遠端儲存庫的最新版本，可以使用 [git pull](#git-pull) 指令。
+        `git merge` ==不會拉取遠端儲存庫暫存區的檔案變更，只會針對已提交的檔案進行合併== ，想要確保取得遠端儲存庫的最新版本，可以使用 [git pull](#git-pull) 指令。
 
 
 ---
@@ -279,12 +312,6 @@ git checkout [-b] branch2
 - `git show`：顯示單個提交的詳細信息，包括檔案更改的內容。
 
 - `git diff`：顯示工作目錄中的檔案與暫存區或上一個提交之間的差異。
-
-- `git branch`：列出所有分支，以及當前所在的分支。
-
-- `git remote -v`：顯示遠端儲存庫的名稱和 URL。
-
-
 
 
 

@@ -1,40 +1,42 @@
-#  將本地存儲庫關聯至多個遠端存儲庫
+# 將本地目錄關聯至多個遠端存儲庫
+
+本文章將說明，在已經連接一個遠端存儲庫的情況下，要怎麼透過`git push`指令，將本地的變更推送至多個遠端存儲庫。
+
+---
 
 ## 建立關聯
 
-使用`git remote add`指令，將本地存儲庫與多個遠端存儲庫做關聯。
+1. 使用`git remote add`指令，連結至主要的遠端儲存庫：
+
+    ```bash
+    git remote add  origin <remote_repository_URL_1>
+    ```
+
+2. 新增其他想要同步更新的遠端儲存庫，可以輸入以下指令：
+
+    ```bash
+    git remote set-url --add --push origin <remote_repository_URL_2>
+    ```
+
+3. 確認遠端儲存庫是否已經成功添加：
+
+    ```bash
+    git remote -v
+    ```
+
+    ![](../assets/images/screenshot/gitremote-v.png)
+
+---
+
+## 提交變更(commit) 並 push
 
 ```bash
-git remote add origin <remote1_url>
-git remote add origin2 <remote2_url>
-```
-
-!!!Note "Note"
-    要透過 SSH URL 來存取遠端儲存庫，需要先建立用於通信的SSH金鑰對，詳細步驟可參考[這篇文章](./ssh-key.md)。
-
-確認遠端儲存庫是否已經成功添加。
-
-```bash
-git remote -v
-```
-
-![](../assets/images/screenshot/gitremoteadd.png)
-
-## 建立 commit
-
- ```bash
- git add .
- ```
-
- ```bash
- git commit -m "description"
- ```
-
-## push 到遠端儲存庫
-
-```bash
+# 提交變更(commit)
+git add .
+git commit -m "description"
+ 
+# push 到遠端儲存庫
 git push origin main
-git push origin2 main
 ```
 
 !!!warning "Warning"
@@ -42,13 +44,15 @@ git push origin2 main
 
 ![](../assets/images/screenshot/gitpushtoremote2.png)
 
+---
+
 ## 執行結果
 
-Push 到 GitLab 的結果
+- push 到 GitLab 的結果
 
 ![](../assets/images/screenshot/remote1.png)
 
-Push 到 GitHub 的結果
+- push 到 GitHub 的結果
 
 ![](../assets/images/screenshot/remote2.png)
 
