@@ -46,6 +46,8 @@
 
 ![](../assets/images/gitlab%20screenshot/merge%20rq%20feature%20to%20main.png)
 
+![](../assets/images/gitlab%20screenshot/codereview.png)
+
 ---
 
 ## step7. 建立 merge request 合併 main -> production
