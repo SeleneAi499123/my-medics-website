@@ -1,6 +1,6 @@
 # Create a new project
 
-恭喜你已經安裝完 Angular 開發時會需要用到的工具，現在我們可以使用 Angular CLI 的指令來建立一個Angular的專案。
+恭喜您已經安裝完 Angular 開發時會需要用到的工具，現在我們可以使用 Angular CLI 的指令來建立一個Angular的專案。
 
 ___
 

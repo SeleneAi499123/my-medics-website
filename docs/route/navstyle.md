@@ -31,8 +31,8 @@ npm install bootstrap@5.3.3
  
 使用Bootstrap的響應式navbar樣板，當使用者介面縮小時可在右方產生三明治按鈕。
 
-![Image title](/assets/images/navbar.jpg)
-![Image title](/assets/images/expand.jpg)
+![Image title](../assets/images/navbar.jpg)
+![Image title](../assets/images/expand.jpg)
 
 ```html
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
