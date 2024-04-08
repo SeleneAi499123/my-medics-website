@@ -195,3 +195,4 @@ nav:
   - Learn more:
     - MkDocs material: more/material.md
     - Build MkDocs website: more/build.md
+    - TypeScript: more/ts.md
