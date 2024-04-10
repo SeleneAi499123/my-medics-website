@@ -156,21 +156,17 @@ nav:
     - Installation: getting-started.md
     - Create a new project: create.md
     - Route: 
-      - Route: route/route.md
+      - What is route: route/route.md
       - Navigation style: route/navstyle.md
       - Parameter passing: route/param.md
 
   - Components: 
     - Component: component/component.md
     - Life cycle: component/lifecycle.md
-    - ng-content: component/ngcontent.md
-    
-    - Directive:    
-      - Directive : directive/directive.md
-
-    - Service:    
-      - Dependency Injection : service/di.md
-      - Http Client: service/httpclient.md
+    - ng-content: component/ngcontent.md 
+    - Directive : directive/directive.md
+    - Dependency Injection : service/di.md
+    - Http Client: service/httpclient.md
 
   - Form:
     - Reactive form: form/reactive-form.md
@@ -188,3 +184,4 @@ nav:
     - MkDocs material: more/material.md
     - Build MkDocs website: more/build.md
     - TypeScript: more/ts.md
+    - Regular Expression : more/regular-expression.md
