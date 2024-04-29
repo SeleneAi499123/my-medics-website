@@ -1,15 +1,16 @@
 # Getting started
 
-[Angular] 是一個基於 [TypeScript] 的前端開發平台，採用[單頁式應用程式]、以及 [MVC] 架構，由 Google 團隊開發和維護，幫助開發者構建高效、模塊化和易於維護的現代 Web 應用程序。
+[Angular] 是一個基於 [TypeScript] 的前端開發架構，採用 [SPA] 以及 [MVC]，由 Google 團隊開發和維護，幫助開發者構建高效、模塊化和易於維護的現代 Web 應用程序。
 
   [Angular]: https://zh.wikipedia.org/zh-tw/Angular
   [TypeScript]: https://www.typescriptlang.org
-  [單頁式應用程式]: https://zh.wikipedia.org/zh-tw/单页应用
+  [SPA]: https://zh.wikipedia.org/zh-tw/单页应用
   [MVC]: https://zh.wikipedia.org/zh-tw/MVC
 
----
 
-:material-information-outline:{ title="Important information" } 想要開始使用 Angular，需要先安裝會使用到的套件及工具。
+:material-information-outline:{ title="Important information" } 想要開始使用 Angular，首先要安裝會使用到的套件及工具。
+
+---
 
 ## 1. 安裝 Node.js
 
@@ -61,4 +62,6 @@ ___
 
 
 !!! warning "若在 VS Code 環境中遇到無法執行 PowerShell 腳本的問題時，請輸入以下指令："
-    `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
+    ```bash
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+    ```

@@ -1,12 +1,8 @@
 # Create a new project
 
-恭喜您已經安裝完 Angular 開發時會需要用到的工具，現在我們可以使用 Angular CLI 的指令來建立一個Angular的專案。
-
-___
-
 ## 建立多專案工作區
 
-同時開發多個 Angular 專案，共用 node_Module 資料夾，在其空間下新增的專案會放在 `project` 資料夾底下。
+建立 Workspace 可以同時開發多個 Angular 專案，共用 node_Module 資料夾，在工作區下新增的專案會放在 `project` 資料夾底下。
 
 ```bash
 ng new my-workspace --create-application false
@@ -24,11 +20,11 @@ ng new my-angular-app -s -S
 
 |  參數    | 說明 |
 | --------- | ----------- |
-| --help    | 列出參數說明  |
-| --routing    | 產生routing module  |
-| --style    | 指定樣式表類型，如CSS  |
-| -S    | 不會建立spec.ts測試檔  |
-| -s | 可使用inline style  |
+| `--help`    | 列出參數說明  |
+| `--routing`    | 產生routing module  |
+| `--style`    | 指定樣式表類型，如CSS  |
+| `-S`    | 不會建立spec.ts測試檔  |
+| `-s` | 可使用inline style  |
 
 ___
 
@@ -42,24 +38,24 @@ ng serve -o
 
 |  參數    | 說明 |
 | --------- | ----------- |
-| --help    | 列出參數說明  |
-| -o    | 在預設瀏覽器開啟  |
-| --port    | 指定port位置  |
-| --ssl | 使用https  |
+| `--help`    | 列出參數說明  |
+| `-o`    | 在預設瀏覽器開啟  |
+| `--port`    | 指定port位置  |
+| `--ssl` | 使用https  |
 
 ___
 
-## ng generate
+## 生成元件指令
 
-Angular CLI 可以透過在命令列輸入以下指令來生成各種類型的 `.ts` 檔案：
+[Angular CLI](https://angular.io/cli/generate) 可以透過在`app`資料夾底下輸入`ng g`指令來生成各種類型的檔案：
 
 ```bash
-ng generate <schematic> <name> [options]
-# 或者使用簡寫形式
-ng g <schematic> <name> [options]
+ng generate <schematic> [name]
+# 簡寫
+ng g <schematic> [name]
 ```
 
-可用的 schematics 包括：
+常用的 schematics：
 
 - component 元件
 - directive 指令

@@ -1,11 +1,8 @@
 # 導覽列樣式
 
+## 引入 Bootstrap
 
-## 使用Bootstrap
-
-[Bootstrap](https://getbootstrap.com) 是受歡迎的前端框架，用於建立響應式、行動優先的網站，也就是讓你的網站排版可以自動適應螢幕大小。它預先做好一套網站的基礎建設，讓你能在框架的基礎上進行開發，不需要再去煩惱瑣碎的設定。  
-
-要套用Bootstrap 需要在`index.html`文件的`<head>`裡面添加：
+[Bootstrap](https://getbootstrap.com) 是受歡迎的前端框架，用於建立響應式、行動優先的網站，讓網站排版可以自動適應螢幕大小。要套用 [Bootstrap](https://getbootstrap.com) 需要在`index.html`文件的`<head>`裡面添加：
 
 === "link"
 
@@ -27,12 +24,19 @@ npm install bootstrap@5.3.3
 
 ---
 
-## 選單navbar
+## 選單 navbar
  
-使用Bootstrap的響應式navbar樣板，當使用者介面縮小時可在右方產生三明治按鈕。
+使用 Bootstrap 的響應式 [navbar](https://getbootstrap.com/docs/4.0/components/navbar/) 樣板，當使用者介面縮小時可在右方產生三明治按鈕。
 
-![Image title](../assets/images/navbar.jpg)
-![Image title](../assets/images/expand.jpg)
+!!! example
+    === "縮小前"
+        ![Image title](../assets/images/navbar.jpg)
+
+    === "縮小後"
+        ![Image title](../assets/images/expand.jpg)
+
+
+
 
 ```html
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -61,7 +65,7 @@ npm install bootstrap@5.3.3
 
 ---
 
-## 下拉選單dropdown
+## 下拉選單 dropdown
 
 
 <img src="/assets/images/dropdown.jpg" width="200"/>
