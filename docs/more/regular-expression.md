@@ -4,14 +4,16 @@ Regular Expression 用`//`包住，有三種用途：
 2. 驗證資料
 3. 抽取資料
 
-```
+``` js
 var value = 'abc'
 const regexp = /^[a-zA-Z]*$/;
 console.log(regexp.test(value));
-// 輸出結果: true
+
+// 輸出結果
+true
 ```
 
-實作網站：https://regex101.com/
+練習網站：https://regex101.com/
 
 ---
 
@@ -74,6 +76,7 @@ console.log(regexp.test(value));
 ```
 # 僅常見中文漢字
 [\u4e00-\u9fa5]
+
 # 匹配不屬於 ASCII 字符範圍
 [^\x00-\x7F]
 ```
@@ -91,7 +94,6 @@ console.log(regexp.test(value));
     '1'  //符合
     '12' //符合
     ```
-    ![]()
 
 === "包含連續兩個數字"
     ```
@@ -126,7 +128,7 @@ console.log(regexp.test(value));
 
 ---
 
-## 規定字串長度
+## 限制字串長度
 
 用`^`開頭`$`做結尾。
 
@@ -176,9 +178,10 @@ AB123Z// 不符合
 在想要擷取的資料範圍加上`()`，加上`?`表示配對0~1次即可。
 
 === "沒加?"
-    ```js title="js"
+    ```js
     var email = 'aaa@yahoo.com.tw';
-    var re = /^.+@(.+)\./  // \.表示跳脫.字元
+    var re = /^.+@(.+)\./
+    // \.表示跳脫.字元
     var result = email.match(re)
     console.log(result[1])
 
@@ -186,9 +189,10 @@ AB123Z// 不符合
     'yahoo.com'
     ```
 === "有加?"
-    ```js title="js"
+    ```js
     var email = 'aaa@yahoo.com.tw';
-    var re = /^.+@(.+?)\./  // \.表示跳脫.字元
+    var re = /^.+@(.+?)\./
+    // \.表示跳脫.字元
     var result = email.match(re)
     console.log(result[1])
 

@@ -182,7 +182,7 @@ nav:
     - Gitlab flow: git/gitlab-flow.md
 
   - Learn more:
-    - MkDocs material: more/material.md
-    - Build MkDocs website: more/build.md
+    - MkDocs Material: more/material.md
+    - 建立 Mk Docs 網站: more/build.md
     - TypeScript: more/ts.md
     - Regular Expression : more/regular-expression.md

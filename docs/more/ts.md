@@ -1,10 +1,12 @@
-# TypeScript 練習
+# TypeScript
+
+[w3schools](https://www.w3schools.com/typescript/index.php) 練習
 
 ---
 
 ## 函式註解
 
-用`/**` `*/`包住函式解釋
+用`/** */`包住函式解釋，用法如下：
 ```
 /**
  * 這是一個加法函式
@@ -12,8 +14,8 @@
  * @param {number} b - 第二個加數
  * @returns {number} 返回兩個加數的和
  */
+ 
 function add(a, b) {
     return a + b;
 }
-
 ```
