@@ -165,9 +165,9 @@ nav:
     - Component: component/component.md
     - Lifecycle: component/lifecycle.md
     - View 的置換: component/ngcontent.md 
-    - Directive : component/directive.md
-    - Dependency Injection : component/di.md
-    - Http Client: component/httpclient.md
+    # - Directive : component/directive.md
+    # - Dependency Injection : component/di.md
+    # - Http Client: component/httpclient.md
 
   - Form:
     - Reactive Form: form/reactive-form.md
@@ -183,6 +183,6 @@ nav:
 
   - Learn more:
     - MkDocs Material: more/material.md
-    - 建立 MkDocs 網站: more/build.md
+    # - 建立 MkDocs 網站: more/build.md
     - TypeScript: more/ts.md
     - Regular Expression : more/regular-expression.md

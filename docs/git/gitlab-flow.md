@@ -34,14 +34,14 @@
 
 ---
 
-## step5. 根據 issue 新增功能並 push 到 repository
+## step5. push 到 repository
 
 
 ![](../assets/images/gitlab%20screenshot/push%20feature.png)
 
 ---
 
-## step6. 建立 merge request 合併 feature -> main
+## step6. 合併 feature -> main
 
 ![](../assets/images/gitlab%20screenshot/merge%20rq%20feature%20to%20main.png)
 
@@ -49,7 +49,7 @@
 
 ---
 
-## step7. 建立 merge request 合併 main -> production
+## step7. 合併 main -> production
 
 ![](../assets/images/gitlab%20screenshot/合併請求%20main%20to%20production.png)
 ![](../assets/images/gitlab%20screenshot/接受合併.png)

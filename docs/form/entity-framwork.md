@@ -40,7 +40,7 @@ public class MeetingRoomContext:DbContext{
 
 ---
 
-## 初始化DbContext資料內容
+## 初始化 DbContext 資料內容
 
 在 Models 資料夾內加入 `DbInitializer.cs`。
 
@@ -87,7 +87,7 @@ public static class DbInitializer
 
 ---
 
-## 修改Program.cs
+## 修改 Program.cs
 
 ```cs title="Program.cs"
 using Microsoft.EntityFrameworkCore;
