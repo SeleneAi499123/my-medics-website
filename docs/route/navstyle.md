@@ -2,7 +2,7 @@
 
 ## 引入 Bootstrap
 
-[Bootstrap](https://getbootstrap.com) 是受歡迎的前端框架，用於建立響應式、行動優先的網站，讓網站排版可以自動適應螢幕大小。要套用 [Bootstrap](https://getbootstrap.com) 需要在`index.html`文件的`<head>`裡面添加：
+[Bootstrap](https://getbootstrap.com) 是受歡迎的前端框架，用於建立響應式、行動優先的網站，讓網站排版可以自動適應螢幕大小。要套用 [Bootstrap](https://getbootstrap.com) 需要在 `index.html` 文件的 `<head>` 裡面添加：
 
 === "link"
 

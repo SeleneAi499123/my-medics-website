@@ -1,5 +1,3 @@
-# Create a new project
-
 ## 建立多專案工作區
 
 建立 Workspace 可以同時開發多個 Angular 專案，共用 node_Module 資料夾，在工作區下新增的專案會放在 `project` 資料夾底下。
@@ -10,7 +8,7 @@ ng new my-workspace --create-application false
 
 ___
 
-## 創建一個 Angular 專案
+## 創建專案
 
 輸入以下指令創建一個新的 Angular 專案：
 

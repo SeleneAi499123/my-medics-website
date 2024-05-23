@@ -1,14 +1,12 @@
 # MkDocs Material
 
-MkDocs Material 有許多好用的小東西，可以幫助我們豐富網站內容，詳細的使用方法可以參考[官方操作手冊](https://squidfunk.github.io/mkdocs-material/)。
+:bulb:{.bulb} MkDocs Material 有許多好用的小東西，可以幫助我們豐富網站內容，詳細的使用方法可以參考[官方操作手冊](https://squidfunk.github.io/mkdocs-material/)。
 
  ---
 
 ## Extra features
 
-:bulb:{.bulb} 以下是我在這個網站有用到的功能：
-
-- ### [Admonitions](https://squidfunk.github.io/mkdocs-material/reference/admonitions/)
+### [Admonitions](https://squidfunk.github.io/mkdocs-material/reference/admonitions/)
 
  使用一些好用的警示框，像是 warning 框跟可展開的 info 框：
 
@@ -22,7 +20,7 @@ MkDocs Material 有許多好用的小東西，可以幫助我們豐富網站內�
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
 
-```
+``` title=".md 寫法"
 !!! warning 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
     euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
@@ -36,13 +34,13 @@ MkDocs Material 有許多好用的小東西，可以幫助我們豐富網站內�
 
 ---
 
-- ### [Buttons](https://squidfunk.github.io/mkdocs-material/reference/buttons/)
+### [Buttons](https://squidfunk.github.io/mkdocs-material/reference/buttons/)
 
-在我的首頁有用到兩個按鈕，分別會導向 Getting started 或 Learn more 頁籤。
+在我的首頁有用到兩個按鈕。
 
 [Angular](../getting-started.md){ .md-button .md-button--primary } [Learn more](#){ .md-button }
 
-```
+``` title=".md 寫法"
 [Angular](../getting-started.md){ .md-button .md-button--primary }
 [Learn more](#){ .md-button }
 
@@ -50,7 +48,7 @@ MkDocs Material 有許多好用的小東西，可以幫助我們豐富網站內�
 
 ---
 
-- ### [Code blocks](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/) 
+### [Code blocks](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/) 
 
 程式碼區塊可以加上標題、行數以及使用螢光筆。
 
@@ -72,7 +70,7 @@ export class CheckExtNoDirective {
 }
 ```
 
-````
+```` title=".md 寫法"
 ``` ts title="check-ext-no.directive.ts" hl_lines="2 6-10" linenums="1"
 // 程式碼...
 ```
@@ -81,7 +79,7 @@ export class CheckExtNoDirective {
 
 ---
 
-- ### [Content tabs](https://squidfunk.github.io/mkdocs-material/reference/content-tabs/)
+### [Content tabs](https://squidfunk.github.io/mkdocs-material/reference/content-tabs/)
 
 若是有兩個資訊需要比對時，可以使用 Content tabs 快速切換瀏覽內容。
 
@@ -95,7 +93,7 @@ export class CheckExtNoDirective {
     npm install -g @angular/cli@15
     ```
 
-```
+``` title=".md 寫法"
 === "Latest"
     ``` sh
     npm install -g @angular/cli
@@ -109,7 +107,7 @@ export class CheckExtNoDirective {
 
 ---
 
-- ### [Data tables](https://squidfunk.github.io/mkdocs-material/reference/data-tables/)
+### [Data tables](https://squidfunk.github.io/mkdocs-material/reference/data-tables/)
 
 | Method      | Description      |
 | ----------- | ---------------- |
@@ -117,7 +115,7 @@ export class CheckExtNoDirective {
 | `PUT`       |  Update resource |
 | `DELETE`    |  Delete resource |
 
-```
+``` title=".md 寫法"
 | Method      | Description      |
 | ----------- | ---------------- |
 | `GET`       |  Fetch resource  |
@@ -127,7 +125,7 @@ export class CheckExtNoDirective {
 
 ---
 
-- ### [Diagrams](https://squidfunk.github.io/mkdocs-material/reference/diagrams/)
+### [Diagrams](https://squidfunk.github.io/mkdocs-material/reference/diagrams/)
 
 
 ``` mermaid
@@ -140,7 +138,7 @@ sequenceDiagram
     DOM->>Component: [(ngModel)] = "Property"
 ```
 
-````
+```` title=".md 寫法"
 ``` mermaid
 sequenceDiagram
     Component->>DOM: {{value}}
@@ -155,7 +153,7 @@ sequenceDiagram
 
 ---
 
-- ### [Grids](https://squidfunk.github.io/mkdocs-material/reference/grids/)
+### [Grids](https://squidfunk.github.io/mkdocs-material/reference/grids/)
 
 
 <div class="grid cards" markdown>
@@ -169,13 +167,13 @@ sequenceDiagram
 
     ---
     了解服務的用法以及靜態注射的原理。  
-    [:octicons-arrow-right-24: Go to Page](../service/di.md)
+    [:octicons-arrow-right-24: Go to Page](../component/di.md)
 
 -   :octicons-quote-16: __Directive__
 
     ---
     建立你自己的指令用於html元素上。  
-    [:octicons-arrow-right-24: Go to Page](../directive/directive.md)
+    [:octicons-arrow-right-24: Go to Page](../component/directive.md)
 
 -   :octicons-blocked-16: __Guard__
 
@@ -184,7 +182,7 @@ sequenceDiagram
     [:octicons-arrow-right-24: Go to Page](#)
 </div>
 
-``` markdown
+``` title=".md 寫法"
 <div class="grid cards" markdown>
 -   :simple-webcomponentsdotorg: __Component__
 
@@ -196,13 +194,13 @@ sequenceDiagram
 
     ---
     了解服務的用法以及靜態注射的原理。  
-    [:octicons-arrow-right-24: Go to Page](../service/di.md)
+    [:octicons-arrow-right-24: Go to Page](../component/di.md)
 
 -   :octicons-quote-16: __Directive__
 
     ---
     建立你自己的指令用於html元素上。  
-    [:octicons-arrow-right-24: Go to Page](../directive/directive.md)
+    [:octicons-arrow-right-24: Go to Page](../component/directive.md)
 
 -   :octicons-blocked-16: __Guard__
 
@@ -216,5 +214,5 @@ sequenceDiagram
 
 ## Special thanks
 
-:rose: 將 MK Docs 網站部署到 GitLab Page 的方法，感謝日宏的[教學](https://test-zoxul-25825563df0f22bc52a20ee5150919645dc3ef0f19709d858ccf.gitlab.io/git/)。  
-:sunflower: 感謝 Kim 學長提供[範例](https://week-1-markdown-vian1113-988613423c571b6e909372a4c42f9b2b41b308.gitlab.io/)。
+> 將 MK Docs 網站部署到 GitLab Page 的方法：[日宏的教學](https://test-zoxul-25825563df0f22bc52a20ee5150919645dc3ef0f19709d858ccf.gitlab.io/git/)  
+> Kim 學長提供：[Sass/SCSS 基本介紹](https://week-1-markdown-vian1113-988613423c571b6e909372a4c42f9b2b41b308.gitlab.io/)

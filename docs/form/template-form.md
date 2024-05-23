@@ -1,12 +1,14 @@
-# Template Form
+# Template Driven Form
 
-通常情況下，對於較簡單的表單，使用Template Form較為方便和快速。Template Form 主要基於 HTML 模板，表單的狀態和驗證邏輯都在 HTML 模板中指定，而響應式表單則更多地依賴於 TypeScript 程式碼。
+通常情況下，對於較簡單的表單，使用 Template Driven Form 較為方便和快速，表單的狀態和驗證邏輯都在 HTML 模板中指定，而響應式表單則更多地依賴於 TypeScript 程式碼。
 
-## 初始化Model的值
+---
 
-因為不需要使用到FormsGroup來控制欄位，所以直接new一個物件當作初始值就好。
+## 初始化 Model 的值
 
-```ts
+因為不需要使用到 FormsGroup 來控制欄位，所以直接 new 一個物件當作初始值就好。
+
+```ts title="Page2Component.ts"
 export class Page2Component {
   capacity=["5","10","15","20"];
   meetingRoom:MeetingRoom;
@@ -23,11 +25,13 @@ export class Page2Component {
 }
 ```
 
+---
+
 ## 表單元素設定
 
-ngForm是透過 ==#== 來指向表單的欄位，表單用`#form="ngForm"`，欄位用`[(ngModel)]="meetingRoom.name" #input="ngModel"`來binding。
+ngForm 是透過 `#` 來指向表單的欄位，表單用 `#form="ngForm"`，欄位用 `#input="ngModel"`。
 
-```html hl_lines="1 4"
+```html hl_lines="1 4" title="Page2Component.html"
 <form #form="ngForm" (ngSubmit)="onSubmit(form)">
     <div class="form-group">
         <label for="name">name</label>
@@ -54,9 +58,11 @@ ngForm是透過 ==#== 來指向表單的欄位，表單用`#form="ngForm"`，欄
 </form>
 ```
 
+---
+
 ## 表單驗證
 ### 1. ngNativeValidate
-在form元素內加上`ngNativeValidate`可以啟用ngForm預設的驗證提示，如下圖所示：
+在 `form` 元素內加上 `ngNativeValidate` 可以啟用 ngForm 預設的驗證提示，如下圖所示：
 
 ```html
 <form #form="ngForm" (ngSubmit)="onSubmit(form)" ngNativeValidate>
@@ -65,14 +71,14 @@ ngForm是透過 ==#== 來指向表單的欄位，表單用`#form="ngForm"`，欄
 
 ### 2. 自訂驗證
 
-通常template form的表單欄位如果想要加人一些自訂的驗證，會用[directive](../directive/directive.md)來做，以檢查分機號碼為例：
+通常 Template Driven Form 的表單欄位如果想要加人一些自訂的驗證，會用 [directive](../component/directive.md) 來做，以檢查分機號碼為例：
 
-#### a. 建立directive
+**a. 建立 directive**
 
 ```bash
 ng g d checkExtNo
 ```
-#### b. 加入provider
+**b. 加入 provider**
 
 ```ts title="check-ext-no.directive.ts" hl_lines="5-7"
 @Directive({
@@ -87,7 +93,7 @@ ng g d checkExtNo
 })
 ```
 
-#### c. 實作Validator介面
+**c. 實作 Validator 介面**
 
 ```ts title="check-ext-no.directive.ts"
 export class CheckExtNoDirective {
@@ -108,9 +114,9 @@ export class CheckExtNoDirective {
 }
 ```
 
-#### d. 套用到HTML
-
-```html
+**d. 套用到 HTML**
+ 
+```html title=".html"
 <div class="form-group">
     <label for="size">分機號碼</label>
     <input type="text" class="form-control" placeholder="租借者的辦公室分機號碼" required name="extNo" pattern="[0-9]{4}" title="4個數字" [(ngModel)]="rentRoom.extNo" #extNo="ngModel" CheckExtNo>

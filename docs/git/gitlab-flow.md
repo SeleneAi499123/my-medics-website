@@ -1,12 +1,11 @@
 # Gitlab flow 練習
 
-==**Environment branches**==
+=== "Environment branches"
+    ![](../assets/images/gitlab%20screenshot/main.jpg)
 
-![](../assets/images/gitlab%20screenshot/main.jpg)
+=== "Release branches"
+    ![](../assets/images/gitlab%20screenshot/main-2.jpg)
 
-==**Release branches**==
-
-![](../assets/images/gitlab%20screenshot/main-2.jpg)
 
 ---
 

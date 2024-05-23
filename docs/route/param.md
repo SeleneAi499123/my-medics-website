@@ -2,7 +2,7 @@
 
 ##  定義參數名稱
 
-我們可以在路由的`path`屬性定義參數名稱，在參數名稱前加上冒號`:`，如`:id`, `:state`。
+我們可以在路由的 `path` 屬性定義參數名稱，在參數名稱前加上冒號，如 `:id`, `:state`。
 
 ```typescript title="app-routing.module.ts" hl_lines="3"
 {
@@ -45,7 +45,7 @@
 
 ##  接收參數
 
-在子路由內的`ngDoCheck()`獲取參數值。
+在子路由內的 `ngDoCheck()` 獲取參數值。
 
 ```ts title="product-detail.component.ts" hl_lines="2 3"
 constructor(private route:ActivatedRoute){}

@@ -1,6 +1,8 @@
 # Entity Framework
 
-Entity Framework 是一個由 Microsoft 開發的對象關係映射（ORM）框架，用於在應用程序和數據庫之間建立映射，從而使開發人員能夠使用.NET 對象來處理數據庫操作，而不需要直接處理 SQL 語句。Entity Framework 提供了一種方便的方法來定義數據模型，並通過對象導航和 LINQ（Language Integrated Query）來執行數據查詢、更新和刪除操作。它支援多種數據庫提供程序，包括 SQL Server、MySQL、Oracle 等。
+Entity Framework 是由 Microsoft 開發的 ORM 框架，用於在應用程序和數據庫之間建立映射，從而使開發人員能夠使用 .NET 對象來處理數據庫操作，而不需要直接處理 SQL 語句，它支援多種資料庫，包括 SQL Server、MySQL、Oracle 等。
+
+---
 
 ## 安裝 Entity Framework Core
 
@@ -11,9 +13,11 @@ dotnet add package Microsoft.EntityFrameworkCore.Tools
 dotnet add package Microsoft.EntityFrameworkCore.Design
 ```
 
-## 定義資料模型，並加入DbContext類別與DbSet
+---
 
-首先建立Models目錄來放資料模型`Models/MeetingRooms.cs`。
+## 定義資料模型
+
+建立 Models 目錄來放資料模型 `Models/MeetingRooms.cs`。
 
 ```cs title="MeetingRooms.cs"
 using System.ComponentModel.DataAnnotations.Schema;
@@ -31,14 +35,14 @@ public class MeetingRoom{
 public class MeetingRoomContext:DbContext{
     public MeetingRoomContext(DbContextOptions<MeetingRoomContext> options):base(options){}
     public DbSet<MeetingRoom> MeetingRoomDbSet{get;set;}
-    
-    
 }
 ```
 
+---
+
 ## 初始化DbContext資料內容
 
-在`Models`資料夾內加入`DbInitializer.cs`
+在 Models 資料夾內加入 `DbInitializer.cs`。
 
 ```cs title="DbInitialize.cs"
 namespace my-web-api.Models;
@@ -67,6 +71,8 @@ public static class DbInitializer
 }
 ```
 
+---
+
 ## 設定連線字串
 
 ```json title="appsetting.json"
@@ -75,11 +81,13 @@ public static class DbInitializer
 },
 ```
 
-!!! warning "注意"
+!!! warning "Warning"
     這裡設定`Integrated Security=True`是因為只在本地資料庫上進行操作，實際情況會有使用者帳密。
 
 
-## 修改Program.cs，載入連線字串
+---
+
+## 修改Program.cs
 
 ```cs title="Program.cs"
 using Microsoft.EntityFrameworkCore;
@@ -93,6 +101,8 @@ builder.Services.AddDbContext<MeetingRoomContext>(
     )
 );
 ```
+
+---
 
 ## 初始化資料表內容
 
@@ -109,6 +119,8 @@ if (app.Environment.IsDevelopment())
 }
 ```
 
+---
+
 ## 更新資料庫
 
 ```bash
@@ -118,18 +130,23 @@ dotnet ef migrations and InitailCreate
 dotnet ef database update
 ```
 
-## 自動產生api controller
+---
+
+## 自動產生 api controller
 
 ```bash
 dotnet aspnet-codegenerator controller -name MeetingRoomsController -async -api -m MeetingRoom -dc MeetingRoomContext -outDir Controllers
 ```
 
-!!! info "要先安裝aspnet程式產生器"
-    `
-    dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design`  
-    `dotnet tool install -g dotnet-aspnet-codegenerator`
+!!! info "安裝 aspnet 程式產生器"
+    ```
+    dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design  
+    dotnet tool install -g dotnet-aspnet-codegenerator
+    ```
 
-## MeetingRoomsController建構時初始化DbContext
+---
+
+## 建構時初始化 DbContext
 
 ```cs title="MeetingRoomsController.cs"
 public class MeetingRoomsController:ComtrollerBase{

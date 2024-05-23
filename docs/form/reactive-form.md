@@ -1,7 +1,8 @@
 # Reactive Form
 
-響應式表單是一種能夠根據使用者設備的大小和類型自動調整其佈局和外觀的表單。這種表單可以在桌面電腦、平板電腦和手機等各種設備上提供最佳的使用體驗，確保用戶能夠輕鬆地填寫和提交表單。
+響應式表單是一種能夠根據使用者設備的大小和類型自動調整其佈局和外觀的表單，這種表單可以在桌面電腦、平板電腦和手機等各種設備上提供最佳的使用體驗，確保用戶能夠輕鬆地填寫和提交表單。
 
+---
 
 ## 引用模組
 
@@ -23,13 +24,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 ```
 
+---
+
 ## 建立類別
 
-依 MVC 的網頁結構，我們會需要一個類別來儲存表單內的所有欄位資料，首先使用Angular CLI建立一個類別，並在類別裡定義欄位名稱及屬性。
+依 MVC 的網頁結構，我們會需要一個類別來儲存表單內的所有欄位資料，首先使用指令 `ng g cl MeetingRoom` 建立一個類別，並在類別裡定義欄位名稱及屬性。
 
-```bash
-ng g cl MeetingRoom
-```
 
 ```ts title="meeting-room.ts"
 export class MeetingRoom {
@@ -44,11 +44,13 @@ export class MeetingRoom {
 }
 ```
 
+---
+
 ## 使用 FormBuilder
 
-我們可以在表單建構的時候使用`FormBuilder`來定義欄位名及屬性，然後在`ngOnInit()`時使用`setValue()`來設值。
+我們可以在表單建構的時候使用 `FormBuilder` 來定義欄位名及屬性，然後在 `ngOnInit()` 時使用 `setValue()` 來設值。
 
-```ts hl_lines="3  8-13 18"
+```ts hl_lines="3  8-13 18" title="Page1Component.ts"
 export class Page1Component {
   capacity=["5","10","15","20"];
   meetingRoomForm: FormGroup;
@@ -75,11 +77,12 @@ export class Page1Component {
 }
 ```
 
-## 設定表單元素的property
+---
 
-在表單的設計上，需要在`<form>`元素內設定`[formGroup]="meetingRoomForm"`以及`(ngSubmit)="onSubmit()">`，以及針對欄位元素設定`formControlName="name"`來進行表單資料的binding。
+## 設定表單元素的 property
 
-```html hl_lines="1 4"
+
+```html hl_lines="1 4" title="Page1Component.html"
 <form [formGroup]="meetingRoomForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
         <label for="name">name</label>
@@ -103,4 +106,4 @@ export class Page1Component {
 </form>
 ```
 
-## 表單驗證
+## 欄位驗證

@@ -2,7 +2,7 @@
 site_name: 小艾的 MkDocs 網站
 site_url: https://test-hannah2400214-ef491c3dd4eaf78a970e206fc5e458d3e166d011e109.gitlab.io
 site_author: Selene Ai
-site_description: 使用 Markdown 記錄目前所學的前端技術與相關知識，邁向程式的偉大航道～
+site_description: 使用 Markdown 記錄目前所學的前端技術與相關知識，邁向軟體開發的偉大航道～
 
 # Repository
 repo_name: SeleneAi499123/my-mkdocs-website
@@ -68,16 +68,16 @@ theme:
 
 # Plugins
 plugins:
-  # - blog
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  # - blog
   # - minify:
   #     minify_html: true
 
 # Hooks
-hooks:
+# hooks:
   # - material/overrides/hooks/shortcodes.py
-  - material/overrides/hooks/translations.py
+  # - material/overrides/hooks/translations.py
 
 # Additional configuration
 extra:
@@ -106,8 +106,7 @@ markdown_extensions:
   - attr_list
   - def_list
   - footnotes
-  - md_in_html
-  
+  - md_in_html 
   - toc:
       permalink: true
   - pymdownx.arithmatex:
@@ -156,33 +155,34 @@ nav:
   - Getting started:
     - Installation: getting-started.md
     - 建立 Angular 專案: create.md
-    - Route: 
-      - Route 可以做什麼: route/route.md
+
+  - Route: 
+      - Route 簡介: route/route.md
       - Navigation style: route/navstyle.md
       - 參數的傳遞: route/param.md
 
-  - Components: 
+  - Angular 元件: 
     - Component: component/component.md
-    - Life cycle: component/lifecycle.md
-    - ng-content: component/ngcontent.md 
-    - Directive : directive/directive.md
-    - Dependency Injection : service/di.md
-    - Http Client: service/httpclient.md
+    - Lifecycle: component/lifecycle.md
+    - View 的置換: component/ngcontent.md 
+    - Directive : component/directive.md
+    - Dependency Injection : component/di.md
+    - Http Client: component/httpclient.md
 
   - Form:
-    - Reactive form: form/reactive-form.md
-    - Template form: form/template-form.md
-    - Web api: form/web-api.md
-    - Entity framwork: form/entity-framwork.md
+    - Reactive Form: form/reactive-form.md
+    - Template Driven Form: form/template-form.md
+    - ASP.NET Web API: form/web-api.md
+    - Entity Framwork: form/entity-framwork.md
   
   - Git: 
-    - Git commands: git/git.md
-    - Git push to multi repo: git/git-remote-multi-repo.md
-    - Add new SSH Key: git/ssh-key.md 
-    - Gitlab flow: git/gitlab-flow.md
+    - Git 指令: git/git.md
+    - Git 推送至多個遠端 repo: git/git-remote-multi-repo.md
+    - SSH Key: git/ssh-key.md 
+    - Gitlab Flow: git/gitlab-flow.md
 
   - Learn more:
     - MkDocs Material: more/material.md
-    - 建立 Mk Docs 網站: more/build.md
+    - 建立 MkDocs 網站: more/build.md
     - TypeScript: more/ts.md
     - Regular Expression : more/regular-expression.md
