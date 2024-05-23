@@ -158,7 +158,7 @@ nav:
 
   - Route: 
       - Route 簡介: route/route.md
-      - Navigation style: route/navstyle.md
+      - Navigation Style: route/navstyle.md
       - 參數的傳遞: route/param.md
 
   - Angular 元件: 

@@ -49,6 +49,7 @@ ___
 
 ```bash
 ng generate <schematic> [name]
+
 # 簡寫
 ng g <schematic> [name]
 ```
